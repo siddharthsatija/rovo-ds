@@ -135,9 +135,6 @@ export function App() {
             </Specimen>
           </Section>
 
-          <footer className="d-footer">
-            <p>Rovo DS is an independent exploration built from the Atlassian Design System’s public tokens and Rovo UI guidance. It isn’t affiliated with or endorsed by Atlassian.</p>
-          </footer>
         </main>
       </div>
     </>
