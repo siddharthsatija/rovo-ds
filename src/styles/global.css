@@ -1,0 +1,53 @@
+@import '../../dist/css/tokens.css';
+
+/* Base — opt-in by importing '@rovo-ds/core/styles' once at the app root. */
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font: var(--ds-font-body);
+  color: var(--ds-text);
+  background: var(--ds-surface);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Shared focus ring: 2px border.focused, offset so it never touches the fill. */
+.rds-focus-ring:focus-visible,
+.rds-focusable:focus-visible {
+  outline: var(--ds-border-width-focused) solid var(--ds-border-focused);
+  outline-offset: var(--ds-space-025);
+}
+
+.rds-visually-hidden {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0);
+  white-space: nowrap; border: 0;
+}
+
+/* Rovo "inferred motion" entrance — opacity + Y, as if emerging from the prompt box. */
+@keyframes rds-enter-up {
+  from { opacity: 0; transform: translateY(var(--ds-space-100)); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes rds-enter-scale {
+  from { opacity: 0; transform: translateY(var(--ds-space-100)) scale(0.96); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes rds-fade { from { opacity: 0; } to { opacity: 1; } }
+
+/* Staggered entrance primitive: set --rds-i on each child (0, 1, 2…). */
+.rds-stagger > * {
+  animation: rds-enter-up var(--ds-motion-duration-long) var(--ds-motion-easing-out-practical) both;
+  animation-delay: calc(var(--rds-i, 0) * var(--ds-motion-rovo-duration-stagger));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0ms !important;
+    animation-iteration-count: 1 !important;
+    animation-delay: 0ms !important;
+    transition-duration: 0ms !important;
+  }
+}

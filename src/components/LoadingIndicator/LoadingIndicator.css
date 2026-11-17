@@ -1,0 +1,66 @@
+/* Thinking dots — four, so the full mosaic order (blue, purple, saffron, lime) is preserved. */
+.rds-dots { display: inline-flex; align-items: center; gap: var(--ds-space-050); height: 1.25rem; }
+.rds-dots__dot {
+  width: 0.375rem; height: 0.375rem;
+  border-radius: var(--ds-radius-xsmall);
+  background: var(--ds-icon-subtlest);
+  animation: rds-dot var(--ds-motion-rovo-duration-thinking) var(--ds-motion-rovo-easing-continuous) infinite;
+}
+.rds-dots__dot:nth-child(2) { animation-delay: calc(var(--ds-motion-rovo-duration-thinking) * 0.15); }
+.rds-dots__dot:nth-child(3) { animation-delay: calc(var(--ds-motion-rovo-duration-thinking) * 0.30); }
+.rds-dots__dot:nth-child(4) { animation-delay: calc(var(--ds-motion-rovo-duration-thinking) * 0.45); }
+.rds-dots[data-appearance="rovo"] .rds-dots__dot:nth-child(1) { background: var(--ds-rovo-icon-blue); }
+.rds-dots[data-appearance="rovo"] .rds-dots__dot:nth-child(2) { background: var(--ds-rovo-icon-purple); }
+.rds-dots[data-appearance="rovo"] .rds-dots__dot:nth-child(3) { background: var(--ds-rovo-icon-saffron); }
+.rds-dots[data-appearance="rovo"] .rds-dots__dot:nth-child(4) { background: var(--ds-rovo-icon-lime); }
+@keyframes rds-dot {
+  0%, 60%, 100% { transform: translateY(0); opacity: 0.5; }
+  30% { transform: translateY(-0.1875rem); opacity: 1; }
+}
+
+/* Mosaic spinner — 2×2, lit clockwise: TL blue → TR purple → BR saffron → BL lime. */
+.rds-mosaic {
+  --rds-m: 1.5rem;
+  display: inline-grid; grid-template-columns: 1fr 1fr; gap: calc(var(--rds-m) * 0.1);
+  width: var(--rds-m); height: var(--rds-m);
+}
+.rds-mosaic--small { --rds-m: 1rem; }
+.rds-mosaic--large { --rds-m: 3rem; }
+.rds-mosaic__tile {
+  border-radius: calc(var(--rds-m) * 0.12);
+  animation: rds-mosaic calc(var(--ds-motion-rovo-duration-thinking) * 1.5) var(--ds-motion-rovo-easing-continuous) infinite;
+}
+.rds-mosaic__tile:nth-child(1) { background: var(--ds-rovo-icon-blue); animation-delay: 0ms; }
+.rds-mosaic__tile:nth-child(2) { background: var(--ds-rovo-icon-purple); animation-delay: calc(var(--ds-motion-rovo-duration-thinking) * 0.375); }
+.rds-mosaic__tile:nth-child(4) { background: var(--ds-rovo-icon-saffron); animation-delay: calc(var(--ds-motion-rovo-duration-thinking) * 0.75); }
+.rds-mosaic__tile:nth-child(3) { background: var(--ds-rovo-icon-lime); animation-delay: calc(var(--ds-motion-rovo-duration-thinking) * 1.125); }
+@keyframes rds-mosaic {
+  0%, 100% { transform: scale(0.7); opacity: 0.45; }
+  25% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(0.7); opacity: 0.45; }
+}
+
+/* Skeleton — neutral, pulses opacity (no gradient sweep across large areas). */
+.rds-skeleton { display: flex; flex-direction: column; gap: var(--ds-space-100); width: 100%; }
+.rds-skeleton__line {
+  display: block; height: 0.75rem;
+  border-radius: var(--ds-radius-small);
+  background: var(--ds-skeleton);
+  animation: rds-pulse 1.6s var(--ds-motion-rovo-easing-continuous) infinite;
+}
+@keyframes rds-pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.45; } }
+
+/* Streaming caret */
+.rds-caret {
+  display: inline-block; width: 0.5rem; height: 1em;
+  margin-inline-start: var(--ds-space-025);
+  vertical-align: text-bottom;
+  border-radius: var(--ds-radius-xsmall);
+  background: var(--ds-rovo-background-brand-bold);
+  animation: rds-caret var(--ds-motion-rovo-duration-caret) steps(1) infinite;
+}
+@keyframes rds-caret { 50% { opacity: 0; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .rds-dots__dot, .rds-mosaic__tile, .rds-skeleton__line, .rds-caret { animation: none; opacity: 1; transform: none; }
+}

@@ -1,0 +1,64 @@
+/*
+ * Skills tag — a slanted chip. The leading "/" carries the collection color;
+ * the fill is neutral and skewed to match. Content itself is not skewed.
+ */
+.rds-skills-tag {
+  --rds-tag-slash: var(--ds-border-accent-gray);
+  --rds-tag-fill: var(--ds-background-neutral);
+  --rds-tag-skew: -16deg;
+
+  position: relative;
+  isolation: isolate;
+  display: inline-flex;
+  align-items: center;
+  height: 1.5rem;
+  max-width: min(100%, 15rem);
+  margin-inline-start: var(--ds-space-050);
+  color: var(--ds-text);
+  font: var(--ds-font-body);
+  vertical-align: middle;
+}
+.rds-skills-tag::before {
+  content: '';
+  position: absolute; inset: 0;
+  z-index: -1;
+  transform: skewX(var(--rds-tag-skew));
+  border-radius: var(--ds-radius-xsmall);
+  border-inline-start: var(--ds-border-width-selected) solid var(--rds-tag-slash);
+  background: var(--rds-tag-fill);
+  transition: background-color var(--ds-motion-duration-xshort) var(--ds-motion-easing-out-practical);
+}
+.rds-skills-tag[data-collection="teamwork"] { --rds-tag-slash: var(--ds-border-accent-blue); }
+.rds-skills-tag[data-collection="software"] { --rds-tag-slash: var(--ds-border-accent-lime); }
+.rds-skills-tag[data-collection="strategy"] { --rds-tag-slash: var(--ds-border-accent-orange); }
+.rds-skills-tag[data-collection="service"]  { --rds-tag-slash: var(--ds-border-accent-yellow); }
+.rds-skills-tag[data-collection="product"]  { --rds-tag-slash: var(--ds-border-accent-purple); }
+
+.rds-skills-tag__main {
+  display: inline-flex; align-items: center; gap: var(--ds-space-050);
+  height: 100%; min-width: 0;
+  padding-inline: var(--ds-space-100) var(--ds-space-100);
+  border: 0; background: none; color: inherit; font: inherit;
+}
+.rds-skills-tag__icon { display: inline-flex; color: var(--ds-icon-subtle); }
+.rds-skills-tag__label { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+.rds-skills-tag--interactive .rds-skills-tag__main { cursor: pointer; }
+.rds-skills-tag--interactive:hover { --rds-tag-fill: var(--ds-background-neutral-hovered); }
+.rds-skills-tag--interactive:active { --rds-tag-fill: var(--ds-background-neutral-pressed); }
+.rds-skills-tag[data-selected] { --rds-tag-fill: var(--ds-background-selected); color: var(--ds-text-selected, var(--ds-text-brand)); }
+
+.rds-skills-tag__main:focus-visible,
+.rds-skills-tag__remove:focus-visible {
+  outline: var(--ds-border-width-focused) solid var(--ds-border-focused);
+  outline-offset: var(--ds-space-025);
+  border-radius: var(--ds-radius-xsmall);
+}
+.rds-skills-tag__remove {
+  display: inline-grid; place-items: center;
+  width: 1.25rem; height: 1.25rem; margin-inline: calc(var(--ds-space-050) * -1) var(--ds-space-050);
+  border: 0; border-radius: var(--ds-radius-xsmall);
+  background: none; color: var(--ds-icon-subtle); cursor: pointer;
+}
+.rds-skills-tag__remove:hover { background: var(--ds-background-neutral-subtle-hovered); }
+.rds-skills-tag__remove .rds-icon { width: 0.75rem; height: 0.75rem; }

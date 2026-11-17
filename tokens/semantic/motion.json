@@ -1,0 +1,69 @@
+{
+  "motion": {
+    "duration": {
+      "$type": "duration",
+      "instant": { "$value": "0ms", "$description": "Reduced-motion substitute for every duration." },
+      "xxshort": { "$value": "50ms" },
+      "xshort": { "$value": "100ms", "$description": "Hover / press feedback." },
+      "short": { "$value": "150ms", "$description": "Small state changes (icon swaps, button → stop)." },
+      "medium": { "$value": "200ms", "$description": "Message entrance, menu open." },
+      "long": { "$value": "250ms", "$description": "Panel and card expand." },
+      "xlong": { "$value": "400ms", "$description": "FAB → chat window transform." },
+      "xxlong": { "$value": "600ms", "$description": "Landing choreography total." }
+    },
+    "easing": {
+      "$type": "cubicBezier",
+      "in": { "practical": { "$value": [0.6, 0, 0.8, 0.6], "$description": "Exits." } },
+      "out": {
+        "practical": { "$value": [0.4, 1, 0.6, 1], "$description": "Default entrances." },
+        "bold": { "$value": [0, 0.4, 0, 1], "$description": "Expressive entrances (landing, FAB open)." }
+      },
+      "inout": { "bold": { "$value": [0.4, 0, 0, 1], "$description": "Element-to-element morphs." } }
+    },
+    "rovo": {
+      "$extensions": { "rovo-ds": { "status": "extension" } },
+      "duration": {
+        "$type": "duration",
+        "stagger": { "$value": "60ms", "$description": "Delay between items in a staggered entrance (illustration → title → prompt → cards)." },
+        "thinking": { "$value": "1200ms", "$description": "One loop of the thinking dots." },
+        "generative": { "$value": "3000ms", "$description": "One rotation of the generative mosaic border. Slow = calm, never alarming." },
+        "caret": { "$value": "1000ms", "$description": "Streaming caret blink." }
+      },
+      "easing": {
+        "$type": "cubicBezier",
+        "continuous": { "$value": [0.45, 0, 0.55, 1], "$description": "Looping, breathing motion — fluid and human, never mechanical." }
+      }
+    }
+  },
+  "opacity": {
+    "$type": "number",
+    "disabled": { "$value": 0.4 },
+    "loading": { "$value": 0.2, "$description": "Content behind a loading overlay." }
+  },
+  "layer": {
+    "$type": "number",
+    "$description": "Stacking order (mirrors @atlaskit/constants layers).",
+    "$extensions": { "rovo-ds": { "status": "extension" } },
+    "card": { "$value": 100 },
+    "navigation": { "$value": 200 },
+    "dialog": { "$value": 300 },
+    "layer": { "$value": 400, "$description": "Popups, menus, nudges." },
+    "blanket": { "$value": 500 },
+    "modal": { "$value": 510 },
+    "flag": { "$value": 600 },
+    "spotlight": { "$value": 700 },
+    "tooltip": { "$value": 800 },
+    "rovo": { "fab": { "$value": 450, "$description": "Rovo floating action button: above popups, below blankets." } }
+  },
+  "breakpoint": {
+    "$type": "dimension",
+    "$description": "Exported to TS/JSON for media queries (CSS variables can't be used inside @media).",
+    "$extensions": { "rovo-ds": { "status": "extension" } },
+    "xxs": { "$value": "0rem" },
+    "xs": { "$value": "30rem" },
+    "sm": { "$value": "48rem" },
+    "md": { "$value": "64rem" },
+    "lg": { "$value": "90rem" },
+    "xl": { "$value": "110.5rem" }
+  }
+}

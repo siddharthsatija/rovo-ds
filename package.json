@@ -1,0 +1,28 @@
+{
+  "name": "@rovo-ds/core",
+  "version": "0.1.0",
+  "description": "Rovo-flavoured Atlassian design system: DTCG tokens compiled to CSS custom properties, React + TypeScript components and conversational-AI patterns.",
+  "type": "module",
+  "main": "src/index.ts",
+  "scripts": {
+    "tokens": "node scripts/build-tokens.mjs",
+    "dev": "npm run tokens && vite --config showcase/vite.config.ts",
+    "typecheck": "tsc --noEmit",
+    "build": "npm run tokens && npm run typecheck && vite build --config showcase/vite.config.ts"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18"
+  },
+  "devDependencies": {
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.3.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "style-dictionary": "^4.4.0",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.8",
+    "vite-plugin-singlefile": "^2.3.4"
+  }
+}

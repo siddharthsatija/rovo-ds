@@ -1,0 +1,97 @@
+.rds-button {
+  --rds-btn-bg: var(--ds-background-neutral);
+  --rds-btn-bg-hover: var(--ds-background-neutral-hovered);
+  --rds-btn-bg-press: var(--ds-background-neutral-pressed);
+  --rds-btn-fg: var(--ds-text-subtle);
+
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--ds-space-050);
+  height: 2rem;
+  padding-inline: var(--ds-space-150);
+  border: 0;
+  border-radius: var(--ds-radius-medium);
+  background: var(--rds-btn-bg);
+  color: var(--rds-btn-fg);
+  font: var(--ds-font-body);
+  font-weight: var(--ds-font-weight-medium);
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+  transition:
+    background-color var(--ds-motion-duration-xshort) var(--ds-motion-easing-out-practical),
+    transform var(--ds-motion-duration-xshort) var(--ds-motion-easing-out-practical);
+}
+.rds-button:hover { background: var(--rds-btn-bg-hover); }
+.rds-button:active { background: var(--rds-btn-bg-press); }
+.rds-button:focus-visible {
+  outline: var(--ds-border-width-focused) solid var(--ds-border-focused);
+  outline-offset: var(--ds-space-025);
+}
+
+.rds-button--compact { height: 1.5rem; padding-inline: var(--ds-space-100); }
+.rds-button--fit { width: 100%; }
+.rds-button__icon { display: inline-flex; }
+.rds-button__label { overflow: hidden; text-overflow: ellipsis; }
+
+/* Appearances */
+.rds-button--primary {
+  --rds-btn-bg: var(--ds-background-brand-bold);
+  --rds-btn-bg-hover: var(--ds-background-brand-bold-hovered);
+  --rds-btn-bg-press: var(--ds-background-brand-bold-pressed);
+  --rds-btn-fg: var(--ds-text-inverse);
+}
+.rds-button--subtle {
+  --rds-btn-bg: var(--ds-background-neutral-subtle);
+  --rds-btn-bg-hover: var(--ds-background-neutral-subtle-hovered);
+  --rds-btn-bg-press: var(--ds-background-neutral-subtle-pressed);
+}
+.rds-button--warning {
+  --rds-btn-bg: var(--ds-background-warning);
+  --rds-btn-bg-hover: var(--ds-background-warning);
+  --rds-btn-bg-press: var(--ds-background-warning);
+  --rds-btn-fg: var(--ds-text-warning);
+}
+.rds-button--danger {
+  --rds-btn-bg: var(--ds-background-danger-bold);
+  --rds-btn-bg-hover: var(--ds-background-danger-bold-hovered);
+  --rds-btn-bg-press: var(--ds-background-danger-bold-pressed);
+  --rds-btn-fg: var(--ds-text-inverse);
+}
+/* Rovo: rich black (light) / pure white (dark). Provided as-is — do not customise. */
+.rds-button--rovo {
+  --rds-btn-bg: var(--ds-rovo-background-brand-bold);
+  --rds-btn-bg-hover: var(--ds-rovo-background-brand-bold-hovered);
+  --rds-btn-bg-press: var(--ds-rovo-background-brand-bold-pressed);
+  --rds-btn-fg: var(--ds-text-inverse);
+}
+
+.rds-button[data-selected] {
+  --rds-btn-bg: var(--ds-background-selected);
+  --rds-btn-bg-hover: var(--ds-background-selected-hovered);
+  --rds-btn-bg-press: var(--ds-background-selected-hovered);
+  --rds-btn-fg: var(--ds-text-brand);
+}
+
+.rds-button:disabled {
+  --rds-btn-bg: var(--ds-background-disabled);
+  --rds-btn-bg-hover: var(--ds-background-disabled);
+  --rds-btn-bg-press: var(--ds-background-disabled);
+  --rds-btn-fg: var(--ds-text-disabled);
+  cursor: not-allowed;
+}
+.rds-button--subtle:disabled { --rds-btn-bg: transparent; --rds-btn-bg-hover: transparent; }
+
+.rds-button--loading { cursor: progress; }
+.rds-button--loading > :not(.rds-button__spinner) { opacity: 0; }
+.rds-button__spinner { position: absolute; inset: 0; display: grid; place-items: center; }
+
+/* Icon button */
+.rds-icon-button { padding: 0; aspect-ratio: 1; }
+.rds-icon-button--small { height: 1.5rem; }
+.rds-icon-button--medium { height: 2rem; }
+.rds-icon-button--large { height: 3rem; }
+.rds-icon-button--large .rds-icon { width: 1.5rem; height: 1.5rem; }
+.rds-icon-button--circle { border-radius: var(--ds-radius-full); }

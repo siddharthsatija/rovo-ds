@@ -1,0 +1,31 @@
+{
+  "space": {
+    "$type": "dimension",
+    "$description": "8px base grid. Name = multiple of 8px x 100 (space.100 = 8px).",
+    "0": { "$value": "0rem" },
+    "025": { "$value": "0.125rem", "$description": "2px" },
+    "050": { "$value": "0.25rem", "$description": "4px — icon-to-label gap." },
+    "075": { "$value": "0.375rem", "$description": "6px" },
+    "100": { "$value": "0.5rem", "$description": "8px — gap between action buttons." },
+    "150": { "$value": "0.75rem", "$description": "12px — chat bubble padding (inline)." },
+    "200": { "$value": "1rem", "$description": "16px — card padding, gap between messages." },
+    "250": { "$value": "1.25rem", "$description": "20px" },
+    "300": { "$value": "1.5rem", "$description": "24px — gap between conversation turns." },
+    "400": { "$value": "2rem", "$description": "32px" },
+    "500": { "$value": "2.5rem", "$description": "40px" },
+    "600": { "$value": "3rem", "$description": "48px" },
+    "800": { "$value": "4rem", "$description": "64px" },
+    "1000": { "$value": "5rem", "$description": "80px" },
+    "negative": {
+      "025": { "$value": "-0.125rem" },
+      "050": { "$value": "-0.25rem" },
+      "075": { "$value": "-0.375rem" },
+      "100": { "$value": "-0.5rem" },
+      "150": { "$value": "-0.75rem" },
+      "200": { "$value": "-1rem" },
+      "250": { "$value": "-1.25rem" },
+      "300": { "$value": "-1.5rem" },
+      "400": { "$value": "-2rem" }
+    }
+  }
+}

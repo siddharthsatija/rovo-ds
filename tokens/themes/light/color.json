@@ -1,0 +1,639 @@
+{
+  "color": {
+    "text": {
+      "[default]": {
+        "$type": "color",
+        "$value": "{palette.neutral.1000}",
+        "$description": "Default text color."
+      },
+      "subtle": {
+        "$type": "color",
+        "$value": "{palette.neutral.800}",
+        "$description": "Secondary text: metadata, helper text, timestamps."
+      },
+      "subtlest": {
+        "$type": "color",
+        "$value": "{palette.neutral.700}",
+        "$description": "Tertiary text: placeholders, disclaimers."
+      },
+      "inverse": {
+        "$type": "color",
+        "$value": "{palette.neutral.0}",
+        "$description": "Text on bold backgrounds, including color.rovo.background.brand.bold."
+      },
+      "disabled": {
+        "$type": "color",
+        "$value": "{palette.neutral.400A}",
+        "$description": "Text in disabled elements."
+      },
+      "brand": {
+        "$type": "color",
+        "$value": "{palette.blue.700}",
+        "$description": "Brand-emphasis text."
+      },
+      "danger": {
+        "$type": "color",
+        "$value": "{palette.red.800}",
+        "$description": "Error and destructive messaging."
+      },
+      "warning": {
+        "$type": "color",
+        "$value": "{palette.orange.800}",
+        "$description": "Warning messaging."
+      },
+      "success": {
+        "$type": "color",
+        "$value": "{palette.lime.800}",
+        "$description": "Positive messaging."
+      },
+      "discovery": {
+        "$type": "color",
+        "$value": "{palette.purple.800}",
+        "$description": "New or discoverable features."
+      },
+      "accent": {
+        "blue": {
+          "$type": "color",
+          "$value": "{palette.blue.800}",
+          "$description": "Accent text \u2014 Teamwork collection."
+        },
+        "lime": {
+          "$type": "color",
+          "$value": "{palette.lime.800}",
+          "$description": "Accent text \u2014 Software collection."
+        },
+        "orange": {
+          "$type": "color",
+          "$value": "{palette.orange.800}",
+          "$description": "Accent text \u2014 Strategy collection."
+        },
+        "yellow": {
+          "$type": "color",
+          "$value": "{palette.yellow.800}",
+          "$description": "Accent text \u2014 Service collection."
+        },
+        "purple": {
+          "$type": "color",
+          "$value": "{palette.purple.800}",
+          "$description": "Accent text \u2014 Product collection."
+        }
+      }
+    },
+    "link": {
+      "[default]": {
+        "$type": "color",
+        "$value": "{palette.blue.700}",
+        "$description": "Links."
+      },
+      "pressed": {
+        "$type": "color",
+        "$value": "{palette.blue.800}",
+        "$description": "Pressed links."
+      }
+    },
+    "icon": {
+      "[default]": {
+        "$type": "color",
+        "$value": "{palette.neutral.1000}",
+        "$description": "Default icon color."
+      },
+      "subtle": {
+        "$type": "color",
+        "$value": "{palette.neutral.800}",
+        "$description": "Secondary icons."
+      },
+      "subtlest": {
+        "$type": "color",
+        "$value": "{palette.neutral.700}",
+        "$description": "Tertiary icons."
+      },
+      "inverse": {
+        "$type": "color",
+        "$value": "{palette.neutral.0}",
+        "$description": "Icons on bold backgrounds."
+      },
+      "disabled": {
+        "$type": "color",
+        "$value": "{palette.neutral.400A}",
+        "$description": "Icons in disabled elements."
+      },
+      "brand": {
+        "$type": "color",
+        "$value": "{palette.blue.700}",
+        "$description": "Brand icons."
+      },
+      "danger": {
+        "$type": "color",
+        "$value": "{palette.red.700}",
+        "$description": "Error icons."
+      },
+      "warning": {
+        "$type": "color",
+        "$value": "{palette.orange.600}",
+        "$description": "Warning icons."
+      },
+      "success": {
+        "$type": "color",
+        "$value": "{palette.lime.600}",
+        "$description": "Success icons."
+      },
+      "discovery": {
+        "$type": "color",
+        "$value": "{palette.purple.600}",
+        "$description": "Discovery icons."
+      }
+    },
+    "border": {
+      "[default]": {
+        "$type": "color",
+        "$value": "{palette.neutral.300A}",
+        "$description": "Default border for containers and dividers."
+      },
+      "bold": {
+        "$type": "color",
+        "$value": "{palette.neutral.600}",
+        "$description": "High-emphasis border."
+      },
+      "input": {
+        "$type": "color",
+        "$value": "{palette.neutral.500}",
+        "$description": "Text inputs and prompt boxes."
+      },
+      "focused": {
+        "$type": "color",
+        "$value": "{palette.blue.500}",
+        "$description": "Focus rings."
+      },
+      "selected": {
+        "$type": "color",
+        "$value": "{palette.blue.700}",
+        "$description": "Selected elements."
+      },
+      "brand": {
+        "$type": "color",
+        "$value": "{palette.blue.700}",
+        "$description": "Brand borders."
+      },
+      "danger": {
+        "$type": "color",
+        "$value": "{palette.red.600}",
+        "$description": "Error borders."
+      },
+      "disabled": {
+        "$type": "color",
+        "$value": "{palette.neutral.200A}",
+        "$description": "Disabled borders."
+      },
+      "accent": {
+        "blue": {
+          "$type": "color",
+          "$value": "{palette.blue.600}",
+          "$description": "Skills tag border \u2014 Teamwork collection."
+        },
+        "lime": {
+          "$type": "color",
+          "$value": "{palette.lime.600}",
+          "$description": "Skills tag border \u2014 Software collection."
+        },
+        "orange": {
+          "$type": "color",
+          "$value": "{palette.orange.600}",
+          "$description": "Skills tag border \u2014 Strategy collection."
+        },
+        "yellow": {
+          "$type": "color",
+          "$value": "{palette.yellow.600}",
+          "$description": "Skills tag border \u2014 Service collection."
+        },
+        "purple": {
+          "$type": "color",
+          "$value": "{palette.purple.600}",
+          "$description": "Skills tag border \u2014 Product collection."
+        },
+        "gray": {
+          "$type": "color",
+          "$value": "{palette.neutral.600}",
+          "$description": "Skills tag border \u2014 neutral / 2P / 3P / custom skills."
+        }
+      }
+    },
+    "background": {
+      "neutral": {
+        "[default]": {
+          "$type": "color",
+          "$value": "{palette.neutral.200A}",
+          "$description": "Default button and neutral fills."
+        },
+        "hovered": {
+          "$type": "color",
+          "$value": "{palette.neutral.300A}",
+          "$description": "Hovered neutral."
+        },
+        "pressed": {
+          "$type": "color",
+          "$value": "{palette.neutral.400A}",
+          "$description": "Pressed neutral."
+        },
+        "subtle": {
+          "[default]": {
+            "$type": "color",
+            "$value": "{palette.transparent}",
+            "$description": "Subtle buttons, toolbar actions."
+          },
+          "hovered": {
+            "$type": "color",
+            "$value": "{palette.neutral.200A}",
+            "$description": "Hovered subtle."
+          },
+          "pressed": {
+            "$type": "color",
+            "$value": "{palette.neutral.300A}",
+            "$description": "Pressed subtle."
+          }
+        },
+        "bold": {
+          "[default]": {
+            "$type": "color",
+            "$value": "{palette.neutral.1000}",
+            "$description": "High-emphasis neutral fill."
+          },
+          "hovered": {
+            "$type": "color",
+            "$value": "{palette.neutral.900}",
+            "$description": "Hovered bold neutral."
+          },
+          "pressed": {
+            "$type": "color",
+            "$value": "{palette.neutral.800}",
+            "$description": "Pressed bold neutral."
+          }
+        }
+      },
+      "brand": {
+        "bold": {
+          "[default]": {
+            "$type": "color",
+            "$value": "{palette.blue.700}",
+            "$description": "Primary (non-Rovo) actions."
+          },
+          "hovered": {
+            "$type": "color",
+            "$value": "{palette.blue.800}",
+            "$description": "Hovered primary."
+          },
+          "pressed": {
+            "$type": "color",
+            "$value": "{palette.blue.850}",
+            "$description": "Pressed primary."
+          }
+        },
+        "subtlest": {
+          "$type": "color",
+          "$value": "{palette.blue.100}",
+          "$description": "Subtle brand fill."
+        }
+      },
+      "selected": {
+        "[default]": {
+          "$type": "color",
+          "$value": "{palette.blue.100}",
+          "$description": "Selected item fill."
+        },
+        "hovered": {
+          "$type": "color",
+          "$value": "{palette.blue.200}",
+          "$description": "Hovered selected item."
+        }
+      },
+      "input": {
+        "[default]": {
+          "$type": "color",
+          "$value": "{palette.neutral.0}",
+          "$description": "Inputs and prompt boxes."
+        },
+        "hovered": {
+          "$type": "color",
+          "$value": "{palette.neutral.100}",
+          "$description": "Hovered inputs."
+        }
+      },
+      "disabled": {
+        "$type": "color",
+        "$value": "{palette.neutral.200A}",
+        "$description": "Disabled fills."
+      },
+      "danger": {
+        "[default]": {
+          "$type": "color",
+          "$value": "{palette.red.100}",
+          "$description": "Error section messages."
+        },
+        "bold": {
+          "[default]": {
+            "$type": "color",
+            "$value": "{palette.red.700}",
+            "$description": "Destructive actions."
+          },
+          "hovered": {
+            "$type": "color",
+            "$value": "{palette.red.800}",
+            "$description": "Hovered destructive action."
+          },
+          "pressed": {
+            "$type": "color",
+            "$value": "{palette.red.900}",
+            "$description": "Pressed destructive action."
+          }
+        }
+      },
+      "warning": {
+        "[default]": {
+          "$type": "color",
+          "$value": "{palette.orange.100}",
+          "$description": "Warning section messages."
+        }
+      },
+      "success": {
+        "[default]": {
+          "$type": "color",
+          "$value": "{palette.lime.100}",
+          "$description": "Success section messages; inserted text in AI diffs."
+        }
+      },
+      "discovery": {
+        "[default]": {
+          "$type": "color",
+          "$value": "{palette.purple.100}",
+          "$description": "Discovery messages."
+        }
+      },
+      "information": {
+        "[default]": {
+          "$type": "color",
+          "$value": "{palette.blue.100}",
+          "$description": "Informational messages."
+        }
+      },
+      "accent": {
+        "blue": {
+          "subtlest": {
+            "$type": "color",
+            "$value": "{palette.blue.100}",
+            "$description": "Accent fill \u2014 blue."
+          }
+        },
+        "lime": {
+          "subtlest": {
+            "$type": "color",
+            "$value": "{palette.lime.100}",
+            "$description": "Accent fill \u2014 lime."
+          }
+        },
+        "orange": {
+          "subtlest": {
+            "$type": "color",
+            "$value": "{palette.orange.100}",
+            "$description": "Accent fill \u2014 orange."
+          }
+        },
+        "yellow": {
+          "subtlest": {
+            "$type": "color",
+            "$value": "{palette.yellow.100}",
+            "$description": "Accent fill \u2014 yellow."
+          }
+        },
+        "purple": {
+          "subtlest": {
+            "$type": "color",
+            "$value": "{palette.purple.100}",
+            "$description": "Accent fill \u2014 purple."
+          }
+        }
+      }
+    },
+    "skeleton": {
+      "[default]": {
+        "$type": "color",
+        "$value": "{palette.neutral.200A}",
+        "$description": "Skeleton loaders."
+      },
+      "subtle": {
+        "$type": "color",
+        "$value": "{palette.neutral.100A}",
+        "$description": "Subtle skeleton (shimmer peak)."
+      }
+    },
+    "blanket": {
+      "[default]": {
+        "$type": "color",
+        "$value": "{palette.neutral.500A}",
+        "$description": "Overlay blanket behind modals."
+      }
+    },
+    "rovo": {
+      "background": {
+        "brand": {
+          "bold": {
+            "[default]": {
+              "$type": "color",
+              "$value": "{palette.neutral.1200}",
+              "$description": "Rovo primary actions: Rovo button, prompt submit, cursors, telepointers."
+            },
+            "hovered": {
+              "$type": "color",
+              "$value": "{palette.neutral.1100}",
+              "$description": "Hovered Rovo primary."
+            },
+            "pressed": {
+              "$type": "color",
+              "$value": "{palette.neutral.1000}",
+              "$description": "Pressed Rovo primary."
+            }
+          }
+        },
+        "message": {
+          "user": {
+            "$type": "color",
+            "$value": "{palette.neutral.200A}",
+            "$description": "User chat bubble. Neutral on purpose: Rovo color is a signal, never a surface.",
+            "$extensions": {
+              "rovo-ds": {
+                "status": "extension"
+              }
+            }
+          },
+          "rovo": {
+            "$type": "color",
+            "$value": "{palette.transparent}",
+            "$description": "Rovo responses sit directly on the surface (no bubble) for readability of long answers.",
+            "$extensions": {
+              "rovo-ds": {
+                "status": "extension"
+              }
+            }
+          }
+        },
+        "suggestion": {
+          "inserted": {
+            "$type": "color",
+            "$value": "{palette.lime.100}",
+            "$description": "Inserted text in a suggested edit (diff).",
+            "$extensions": {
+              "rovo-ds": {
+                "status": "extension"
+              }
+            }
+          },
+          "removed": {
+            "$type": "color",
+            "$value": "{palette.red.100}",
+            "$description": "Removed text in a suggested edit (diff).",
+            "$extensions": {
+              "rovo-ds": {
+                "status": "extension"
+              }
+            }
+          }
+        }
+      },
+      "border": {
+        "blue": {
+          "$type": "color",
+          "$value": "{palette.blue.700}",
+          "$description": "Rovo mosaic \u2014 blue (position 1, clockwise)."
+        },
+        "purple": {
+          "$type": "color",
+          "$value": "{palette.purple.600}",
+          "$description": "Rovo mosaic \u2014 purple (position 2)."
+        },
+        "saffron": {
+          "$type": "color",
+          "$value": "{palette.orange.400}",
+          "$description": "Rovo mosaic \u2014 saffron (position 3)."
+        },
+        "lime": {
+          "$type": "color",
+          "$value": "{palette.lime.600}",
+          "$description": "Rovo mosaic \u2014 lime (position 4)."
+        }
+      },
+      "icon": {
+        "blue": {
+          "$type": "color",
+          "$value": "{palette.blue.700}",
+          "$description": "Rovo icon \u2014 blue."
+        },
+        "purple": {
+          "$type": "color",
+          "$value": "{palette.purple.600}",
+          "$description": "Rovo icon \u2014 purple."
+        },
+        "saffron": {
+          "$type": "color",
+          "$value": "{palette.orange.400}",
+          "$description": "Rovo icon \u2014 saffron."
+        },
+        "lime": {
+          "$type": "color",
+          "$value": "{palette.lime.600}",
+          "$description": "Rovo icon \u2014 lime."
+        }
+      },
+      "text": {
+        "suggestion": {
+          "removed": {
+            "$type": "color",
+            "$value": "{palette.red.800}",
+            "$description": "Struck-through removed text in a suggested edit.",
+            "$extensions": {
+              "rovo-ds": {
+                "status": "extension"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "elevation": {
+    "surface": {
+      "[default]": {
+        "$type": "color",
+        "$value": "{palette.neutral.0}",
+        "$description": "Default page surface."
+      },
+      "hovered": {
+        "$type": "color",
+        "$value": "{palette.neutral.200}",
+        "$description": "Hovered surface."
+      },
+      "pressed": {
+        "$type": "color",
+        "$value": "{palette.neutral.300}",
+        "$description": "Pressed surface."
+      },
+      "sunken": {
+        "$type": "color",
+        "$value": "{palette.neutral.100}",
+        "$description": "Sunken: backdrop behind raised cards, chat thread wells."
+      },
+      "raised": {
+        "[default]": {
+          "$type": "color",
+          "$value": "{palette.neutral.0}",
+          "$description": "Cards: suggestion cards, prompt starters."
+        },
+        "hovered": {
+          "$type": "color",
+          "$value": "{palette.neutral.200}",
+          "$description": "Hovered raised."
+        },
+        "pressed": {
+          "$type": "color",
+          "$value": "{palette.neutral.300}",
+          "$description": "Pressed raised."
+        }
+      },
+      "overlay": {
+        "[default]": {
+          "$type": "color",
+          "$value": "{palette.neutral.0}",
+          "$description": "Menus, popups, nudges, Rovo menus."
+        },
+        "hovered": {
+          "$type": "color",
+          "$value": "{palette.neutral.200}",
+          "$description": "Hovered overlay."
+        },
+        "pressed": {
+          "$type": "color",
+          "$value": "{palette.neutral.300}",
+          "$description": "Pressed overlay."
+        }
+      }
+    },
+    "rovo": {
+      "surface": {
+        "overlay": {
+          "[default]": {
+            "$type": "color",
+            "$value": "{palette.neutral.100}",
+            "$description": "Rovo as an overlay inside another app (create, remix, omnibar). Never for menus."
+          },
+          "hovered": {
+            "$type": "color",
+            "$value": "{palette.neutral.200}",
+            "$description": "Hovered Rovo overlay."
+          },
+          "pressed": {
+            "$type": "color",
+            "$value": "{palette.neutral.300}",
+            "$description": "Pressed Rovo overlay."
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+.rds-icon { flex-shrink: 0; display: inline-block; vertical-align: middle; }
+.rds-icon--small { width: 1rem; height: 1rem; }
+.rds-icon--medium { width: 1.5rem; height: 1.5rem; }
+.rds-icon--large { width: 2rem; height: 2rem; }
+
+/* Rovo icon: sparkle rendered in the Rovo mosaic. Use only to mark AI-powered actions. */
+.rds-rovo-icon { display: inline-flex; color: var(--ds-icon); }
+.rds-rovo-icon[data-appearance="mosaic"] .rds-icon { color: var(--ds-rovo-icon-purple); }
+.rds-rovo-icon[data-appearance="mosaic"] .rds-icon path:last-child { color: var(--ds-rovo-icon-saffron); }
+
+/* Icon tile — sparkle on a tile, for prominent AI actions (pair with a label). */
+.rds-icon-tile {
+  display: inline-grid; place-items: center; flex-shrink: 0;
+  width: 1.5rem; height: 1.5rem;
+  border-radius: var(--ds-radius-tile);
+  background: var(--ds-rovo-background-brand-bold);
+  color: var(--ds-text-inverse);
+}
+.rds-icon-tile--medium { width: 2rem; height: 2rem; }
+.rds-icon-tile--large { width: 2.5rem; height: 2.5rem; }

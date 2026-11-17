@@ -1,0 +1,80 @@
+{
+  "elevation": {
+    "shadow": {
+      "raised": {
+        "$type": "shadow",
+        "$value": [
+          {
+            "offsetX": "0px",
+            "offsetY": "0px",
+            "blur": "0px",
+            "spread": "1px",
+            "color": "#00000000"
+          },
+          {
+            "offsetX": "0px",
+            "offsetY": "1px",
+            "blur": "1px",
+            "spread": "0px",
+            "color": "#01040480"
+          },
+          {
+            "offsetX": "0px",
+            "offsetY": "0px",
+            "blur": "1px",
+            "spread": "0px",
+            "color": "#01040480"
+          }
+        ],
+        "$description": "Cards: suggestion cards, prompt starters, chat input."
+      },
+      "overlay": {
+        "$type": "shadow",
+        "$value": [
+          {
+            "offsetX": "0px",
+            "offsetY": "0px",
+            "blur": "0px",
+            "spread": "1px",
+            "color": "#BDBDBD1F"
+          },
+          {
+            "offsetX": "0px",
+            "offsetY": "8px",
+            "blur": "12px",
+            "spread": "0px",
+            "color": "#0104045C"
+          },
+          {
+            "offsetX": "0px",
+            "offsetY": "0px",
+            "blur": "1px",
+            "spread": "1px",
+            "color": "#01040480"
+          }
+        ],
+        "$description": "Menus, popups, nudges, floating action button."
+      },
+      "overflow": {
+        "$type": "shadow",
+        "$value": [
+          {
+            "offsetX": "0px",
+            "offsetY": "0px",
+            "blur": "12px",
+            "spread": "0px",
+            "color": "#0104048F"
+          },
+          {
+            "offsetX": "0px",
+            "offsetY": "0px",
+            "blur": "1px",
+            "spread": "0px",
+            "color": "#01040480"
+          }
+        ],
+        "$description": "Scroll-overflow edges (e.g. chat thread top)."
+      }
+    }
+  }
+}

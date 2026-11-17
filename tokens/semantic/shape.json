@@ -1,0 +1,24 @@
+{
+  "radius": {
+    "$type": "dimension",
+    "xsmall": { "$value": "0.125rem", "$description": "2px — badges, inline code." },
+    "small": { "$value": "0.25rem", "$description": "4px — tags, checkboxes." },
+    "medium": { "$value": "0.375rem", "$description": "6px — buttons, inputs." },
+    "large": { "$value": "0.5rem", "$description": "8px — cards, suggestion cards, menus." },
+    "xlarge": { "$value": "0.75rem", "$description": "12px — chat bubbles, prompt box, panels." },
+    "xxlarge": { "$value": "1rem", "$description": "16px — modals, large Rovo surfaces." },
+    "full": { "$value": "624.9375rem", "$description": "Pills, avatars, floating action button." },
+    "tile": { "$value": "25%", "$description": "Icon tiles (scales with tile size)." }
+  },
+  "border": {
+    "width": {
+      "$type": "dimension",
+      "[default]": { "$value": "0.0625rem", "$description": "1px" },
+      "selected": { "$value": "0.125rem", "$description": "2px" },
+      "focused": { "$value": "0.125rem", "$description": "2px focus ring." },
+      "rovo": {
+        "generative": { "$value": "0.125rem", "$description": "2px generative (mosaic) border.", "$extensions": { "rovo-ds": { "status": "extension" } } }
+      }
+    }
+  }
+}

@@ -1,0 +1,49 @@
+@property --rds-gb-angle {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 0deg;
+}
+
+.rds-genborder {
+  --rds-gb-w: var(--ds-border-width-rovo-generative);
+  --rds-gb-r: var(--ds-radius-large);
+  position: relative;
+  padding: var(--rds-gb-w);
+  border-radius: var(--rds-gb-r);
+  background: transparent;
+}
+.rds-genborder--medium { --rds-gb-r: var(--ds-radius-medium); }
+.rds-genborder--xlarge { --rds-gb-r: var(--ds-radius-xlarge); }
+.rds-genborder--xxlarge { --rds-gb-r: var(--ds-radius-xxlarge); }
+
+.rds-genborder__content {
+  position: relative;
+  height: 100%;
+  border-radius: calc(var(--rds-gb-r) - var(--rds-gb-w));
+  background: var(--ds-surface-raised);
+}
+/* Idle: quiet inset border, no layout shift when generation starts/stops. */
+.rds-genborder[data-idle-border]:not([data-generating]) > .rds-genborder__content {
+  box-shadow: inset 0 0 0 var(--ds-border-width) var(--ds-border);
+}
+
+.rds-genborder[data-generating] {
+  /* Hard colour stops, four flat blocks clockwise: blue (left), purple (top), saffron (right), lime (bottom). */
+  --rds-gb-c: var(--rds-gb-corner, 45deg);
+  background: conic-gradient(
+    from calc(var(--rds-gb-angle) - var(--rds-gb-c)),
+    var(--ds-rovo-border-purple) 0deg calc(var(--rds-gb-c) * 2),
+    var(--ds-rovo-border-saffron) 0 180deg,
+    var(--ds-rovo-border-lime) 0 calc(180deg + var(--rds-gb-c) * 2),
+    var(--ds-rovo-border-blue) 0 360deg
+  );
+  animation: rds-gb-rotate var(--ds-motion-rovo-duration-generative) linear infinite;
+}
+
+@keyframes rds-gb-rotate { to { --rds-gb-angle: 360deg; } }
+
+/* Static: the mosaic without rotation (diagrams, reduced motion). */
+.rds-genborder[data-static] { animation: none; }
+@media (prefers-reduced-motion: reduce) {
+  .rds-genborder[data-generating] { animation: none; }
+}

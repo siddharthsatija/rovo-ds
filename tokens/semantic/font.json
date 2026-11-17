@@ -1,0 +1,47 @@
+{
+  "font": {
+    "family": {
+      "$type": "fontFamily",
+      "heading": { "$value": ["Atlassian Sans", "ui-sans-serif", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Ubuntu", "Helvetica Neue", "sans-serif"], "$description": "Headings in product UI." },
+      "body": { "$value": ["Atlassian Sans", "ui-sans-serif", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Ubuntu", "Helvetica Neue", "sans-serif"], "$description": "Body copy, chat messages, UI labels." },
+      "code": { "$value": ["Atlassian Mono", "ui-monospace", "Menlo", "Segoe UI Mono", "Ubuntu Mono", "monospace"], "$description": "Inline code and code blocks in AI responses." },
+      "brand": {
+        "heading": { "$value": ["Charlie Display", "ui-sans-serif", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Ubuntu", "Helvetica Neue", "sans-serif"], "$description": "Marketing / Rovo landing headlines only." },
+        "body": { "$value": ["Charlie Text", "ui-sans-serif", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Ubuntu", "Helvetica Neue", "sans-serif"], "$description": "Marketing body copy only." }
+      }
+    },
+    "weight": {
+      "$type": "fontWeight",
+      "regular": { "$value": 400 },
+      "medium": { "$value": 500 },
+      "semibold": { "$value": 600 },
+      "bold": { "$value": 653, "$description": "Atlassian Sans variable bold. Falls back to 700 in non-variable fonts." }
+    },
+    "heading": {
+      "$type": "typography",
+      "xxlarge": { "$value": { "fontFamily": "{font.family.heading}", "fontWeight": "{font.weight.bold}", "fontSize": "2rem", "lineHeight": "2.25rem" }, "$description": "32/36 — Rovo landing greeting." },
+      "xlarge": { "$value": { "fontFamily": "{font.family.heading}", "fontWeight": "{font.weight.bold}", "fontSize": "1.75rem", "lineHeight": "2rem" }, "$description": "28/32" },
+      "large": { "$value": { "fontFamily": "{font.family.heading}", "fontWeight": "{font.weight.bold}", "fontSize": "1.5rem", "lineHeight": "1.75rem" }, "$description": "24/28 — page titles." },
+      "medium": { "$value": { "fontFamily": "{font.family.heading}", "fontWeight": "{font.weight.bold}", "fontSize": "1.25rem", "lineHeight": "1.5rem" }, "$description": "20/24 — panel titles." },
+      "small": { "$value": { "fontFamily": "{font.family.heading}", "fontWeight": "{font.weight.bold}", "fontSize": "1rem", "lineHeight": "1.25rem" }, "$description": "16/20 — section headings inside AI responses." },
+      "xsmall": { "$value": { "fontFamily": "{font.family.heading}", "fontWeight": "{font.weight.bold}", "fontSize": "0.875rem", "lineHeight": "1.25rem" }, "$description": "14/20 — card titles, message author." },
+      "xxsmall": { "$value": { "fontFamily": "{font.family.heading}", "fontWeight": "{font.weight.bold}", "fontSize": "0.75rem", "lineHeight": "1rem" }, "$description": "12/16 — overlines, group labels." }
+    },
+    "body": {
+      "$type": "typography",
+      "large": { "$value": { "fontFamily": "{font.family.body}", "fontWeight": "{font.weight.regular}", "fontSize": "1rem", "lineHeight": "1.5rem" }, "$description": "16/24 — long-form reading, full-page Rovo chat." },
+      "[default]": { "$value": { "fontFamily": "{font.family.body}", "fontWeight": "{font.weight.regular}", "fontSize": "0.875rem", "lineHeight": "1.25rem" }, "$description": "14/20 — default UI and chat panel text." },
+      "small": { "$value": { "fontFamily": "{font.family.body}", "fontWeight": "{font.weight.regular}", "fontSize": "0.75rem", "lineHeight": "1rem" }, "$description": "12/16 — timestamps, citations, AI disclaimers." }
+    },
+    "metric": {
+      "$type": "typography",
+      "large": { "$value": { "fontFamily": "{font.family.body}", "fontWeight": "{font.weight.bold}", "fontSize": "1.75rem", "lineHeight": "2rem" } },
+      "medium": { "$value": { "fontFamily": "{font.family.body}", "fontWeight": "{font.weight.bold}", "fontSize": "1.5rem", "lineHeight": "1.75rem" } },
+      "small": { "$value": { "fontFamily": "{font.family.body}", "fontWeight": "{font.weight.bold}", "fontSize": "1rem", "lineHeight": "1.25rem" } }
+    },
+    "code": {
+      "$type": "typography",
+      "[default]": { "$value": { "fontFamily": "{font.family.code}", "fontWeight": "{font.weight.regular}", "fontSize": "0.875em", "lineHeight": "1" }, "$description": "Relative to parent size so inline code scales with surrounding text." }
+    }
+  }
+}

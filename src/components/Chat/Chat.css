@@ -1,0 +1,52 @@
+/* ---------------------------------------------------------------- Thread */
+.rds-thread {
+  display: flex; flex-direction: column;
+  gap: var(--ds-space-300);
+  padding: var(--ds-space-200);
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+.rds-thread--compact { gap: var(--ds-space-200); }
+.rds-thread > .rds-message--grouped { margin-top: calc(var(--ds-space-200) * -1 + var(--ds-space-050)); }
+
+/* ---------------------------------------------------------------- Message */
+.rds-message {
+  display: flex; flex-direction: column; gap: var(--ds-space-075);
+  min-width: 0;
+  animation: rds-enter-up var(--ds-motion-duration-medium) var(--ds-motion-easing-out-practical) both;
+}
+.rds-message--static { animation: none; }
+
+.rds-message__header { display: flex; align-items: center; gap: var(--ds-space-100); }
+.rds-message__author { font: var(--ds-font-heading-xsmall); color: var(--ds-text); }
+.rds-message__time { font: var(--ds-font-body-small); color: var(--ds-text-subtlest); }
+
+/* User — right aligned bubble, tail corner tightened toward the sender */
+.rds-message--user { align-items: flex-end; }
+.rds-message--user .rds-message__header { flex-direction: row-reverse; }
+.rds-message--user .rds-message__body {
+  max-width: min(80%, 36rem);
+  padding: var(--ds-space-100) var(--ds-space-150);
+  border-radius: var(--ds-radius-xlarge) var(--ds-radius-xlarge) var(--ds-radius-small) var(--ds-radius-xlarge);
+  background: var(--ds-rovo-background-message-user);
+  color: var(--ds-text);
+  font: var(--ds-font-body);
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+/* Rovo — no bubble, indented to align with the author name */
+.rds-message--rovo .rds-message__body {
+  padding-inline-start: calc(1.5rem + var(--ds-space-100));
+  background: var(--ds-rovo-background-message-rovo);
+  color: var(--ds-text);
+  font: var(--ds-font-body);
+}
+
+/* System */
+.rds-message--system {
+  flex-direction: row; justify-content: center; align-items: center; gap: var(--ds-space-100);
+  color: var(--ds-text-subtlest);
+  font: var(--ds-font-body-small);
+  text-align: center;
+}
